@@ -14,7 +14,7 @@ output:
 <img src="images/headshot.jpeg" style="width:75%">
 
 
-## Working toward policy-driven, person-centered healthcare efficiency through data analysis and innovative problem solving
+**Working toward policy-driven, person-centered healthcare efficiency through data analysis and innovative problem solving**
 
 
 
