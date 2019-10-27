@@ -3,4 +3,15 @@ title: "about"
 output: html_document
 ---
 
-I am a graduate student at Columbia University's Mailman School of Public Health. I am studying 
+I am a graduate student at Columbia University's Mailman School of Public Health. I am studying Health Policy and Management with a concentration in Applied Biostatistics.
+
+Upon graduation I am hoping to work on waste and abuse in the healthcare system through data analytics and innovative problem solving.
+
+I grew up in Minneapolis, Minnesota. My interests include running, yoga, and the Minnesota Twins. I have two Newfoundland dogs:
+
+## Mayzie
+<img src="images/Mayzie.jpeg" style="width:75%">
+
+## Wilson
+<img src="images/Wilson.jpg" style="width:75%">
+
