@@ -7,7 +7,8 @@ output:
     theme: cerulean
 ---
 
-# Hannah Bowlin, MPH
+# MPH Candidate
+## Health Policy and Management/ Applied Biostatistics
 
 
 <img src="images/headshot.jpeg" style="width:75%">
