@@ -1,0 +1,55 @@
+---
+title: "resume"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Hannah Bowlin
+bowlin.hannah@columbia.edu • 952-693-8236
+
+EDUCATION
+Columbia University, Mailman School of Public Health, New York, NY				                Expected May 2020
+Master of Public Health (MPH), department of Health Policy and Management, certificate in Applied Biostatistics
+
+Relevant Coursework: Accounting and Budgeting, Empirical Analysis Methods, Quantitative and Qualitative Methods, Health Policy & Political Analysis, Health Economics, Health Systems: Comparative and United States, Applied Regression, Data Science, Analysis of Categorical Data, Relational Databases and SQL Programming
+
+Projects: Financial Analysis of CRS; Empirical Analysis of Public Health Access Improvements through Medicaid Expansion in Idaho; Policy Memo on Medicare and Medicaid Drug Transparency Pricing; Case Analysis of Global Health Partners
+
+Boston College, Chestnut Hill, MA										                  May 2017
+Bachelor of Arts, major in French, minor in Medical Humanities
+Honors: Dean’s List; Pi Delta Phi Honor Society
+University de Grenoble, Study Abroad Fall 2015, Diplôme Approfondi de la langue Française, Niveau C1 
+
+EXPERIENCE
+Fidelis Care, New York City, NY- Graduate Intern, Internal Consulting Team			    	          June 2019-August 2019
+•	Managed the functional migration of over 1 million authorizations records from the local Fidelis database to the Centene corporate data warehouse through test scenario development and execution for the streamlining of vendor reporting and data analysis
+•	Assembled a deck of 10 third-party vendor extracts for the Payment Integrity department detailing over 30 vendor file feeds to inform the functional migration of Coordination of Benefits data and future payment integrity initiatives
+•	Translated state and federal policy guidelines into process flows and job aides to be used by over 300 member services staff and child advocates for the transition of children’s FFS Medicaid services to managed care
+
+Mailman School of Public Health, New York City, NY- Graduate TA, Quantitative Foundations                             August 2019- Present
+•	Develop and teach epidemiology, biostatistics, and STATA coding course materials to 25 first-year MPH students
+•	Tailor course materials to students’ learning styles in office hours to ensure they comprehend the curriculum and succeed on exams
+
+Rostro de Cristo, Durán, Ecuador- Assistant Clinic Manager, Nutrition & Human Development	                             July 2017- May 2018
+•	Coordinated with city officials to bring medical brigades and public health initiatives to the Centro de Nutrícion y Desarrollo Humano (Center for Nutrition and Human Development) to provide uninsured community members with basic medical attention
+•	Managed the $10,000 clinic budget and allocated resources to programs within the Center for Nutrition and Human Development based on community members’ desires and health needs                                   
+
+Framingham Heart Study, Framingham, MA- Neuropsychological Research Intern				            Summer 2016
+•	Conducted and presented individual research regarding a positive linear correlation between Traumatic Brain Injury (TBI) and Depression to the International Conference on Brain Injury in New Orleans, Louisiana in March 2017 
+•	Collaborated as a research team to establish an efficient data entry and access system for future TBI data analysis
+
+Intermed Consultants, Edina, MN- Data Analysis Intern					            Summer 2015- December 2018
+•	Consulted with nephrologists to create a patient database in the EPIC charting system to facilitate pulling dialysis patients’ home medicine and problem lists
+•	Created and managed education materials for patients with kidney disease to ensure they had appropriate resources for home care 
+
+Boston College EMS, Chestnut Hill, MA- EMT-Basic					             October 2014- December 2016
+•	Provided over 100 hours of BLS patient care in a fast-paced environment requiring quick-thinking, excellent communication, and high-stakes decision making
+•	Consulted on the Office of Student Affairs’ Student Code of Conduct to better support students in their health and safety decision-making on campus
+SKILLS
+•	Technical: SQL, STATA, SAS, R, Proficiency with Microsoft Office (Word, Excel, PowerPoint, Access)
+•	Languages: Fluent in French and Spanish 
+•	Interests: Acapella music, Running half and full marathons, Minnesota Twins
+
