@@ -1,0 +1,6 @@
+---
+title: "about"
+output: html_document
+---
+
+I am a graduate student at Columbia University's Mailman School of Public Health. I am studying 
