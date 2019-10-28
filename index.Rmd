@@ -7,9 +7,12 @@ output:
     theme: flatly
 ---
 
+
 ## MPH Candidate
- * _Department_ : Health Policy and Management
- * _Certificate_ : Applied Biostatistics
+
+ _Department_ : Health Policy and Management
+ 
+ _Certificate_ : Applied Biostatistics
 
 <img src="images/headshot.jpeg" style="width:75%">
 
