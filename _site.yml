@@ -8,7 +8,9 @@ navbar:
     - text: "Resume"
       href: resume.html
     - icon: fa-envelope fa-lg
-      href: mailto:<you@youremail.com>
+      href: mailto:<bowlin.hannah@columbia.edu>
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/hannahbowlin 
     - icon: fa-github fa-lg
       href: http://github.com/hmbowlin/
  
