@@ -7,11 +7,11 @@ output:
     theme: cerulean
 ---
 
-<img src="images/headshot.jpeg" style="width:75%">
-
 # MPH Candidate
 ## Department: Health Policy and Management
-## Certificate: Applied Biostatistics
+### Certificate: Applied Biostatistics
+
+<img src="images/headshot.jpeg" style="width:75%">
 
 **Working toward policy-driven, person-centered healthcare efficiency through data analysis and innovative problem solving**
 
