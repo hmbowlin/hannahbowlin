@@ -4,12 +4,12 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
+    theme: flatly
 ---
 
-# MPH Candidate
-## _Department_ : Health Policy and Management
-### _Certificate_ : Applied Biostatistics
+## MPH Candidate
+ * _Department_ : Health Policy and Management
+ * _Certificate_ : Applied Biostatistics
 
 <img src="images/headshot.jpeg" style="width:75%">
 
