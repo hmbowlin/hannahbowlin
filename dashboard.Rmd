@@ -24,38 +24,38 @@ theme_set(theme_bw() + theme(legend.position = "bottom"))
 data("instacart")
 
 instacart_df = 
-  select(instacart, order_number, product_name, department, aisle) %>%
-  group_by(aisle) %>%
+  select(instacart, order_number, product_name, department, aisle, order_dow, order_hour_of_day) %>%
+  mutate(week_day = recode(order_dow, 
+       "0" = "Sunday",
+       "1" = "Monday",
+       "2" = "Tuesday",
+       "3" = "Wednesday",
+       "4" = "Thursday",
+       "5" = "Friday",
+       "6" = "Saturday")) %>%
   filter(str_detect(aisle, "cheese")) %>%
   filter(str_detect(product_name, "[S,s]hredded")) %>%
-  group_by(product_name) %>%
-  count(product_name) %>%
-  mutate(count = n)
+  filter(str_detect(product_name, "[O,o]rganic")) %>%
+  group_by(week_day) %>%
+  mutate(mean_hour = mean(order_hour_of_day)) 
 
 ```
 
-Column {data-width=350}
+Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A: Popularity of Shredded Cheese Types
+### Chart A: Popularity of Organic Shredded Cheeses
 
 ```{r, echo = FALSE}
 instacart_df %>%
-  mutate(text_label = str_c("Name: ", product_name, '\nCount: ', count)) %>%
-  plot_ly(x = ~product_name, 
-          y = ~count, 
-          type = "scatter", 
-          mode = "markers",
-          color = ~count, 
-          text = ~text_label, 
-          alpha = 0.5)
-  
+  mutate(text_label = str_c("Name: ", product_name, '\nWeek Day: ', week_day)) %>%
+  plot_ly(x = ~week_day, y = ~mean_hour, type = "scatter", color = ~product_name, mode = "markers", text = ~text_label, alpha = 0.5) 
 ```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Chart B: 
 
 ```{r, echo = FALSE}
 weather = 
@@ -70,6 +70,10 @@ weather =
                       USS0023B17S = "Waterhole_WA"),
     tmin = tmin / 10,
     tmax = tmax / 10)
+
+
+
+
 ```
 
 ### Chart C
