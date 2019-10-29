@@ -44,12 +44,21 @@ instacart_df =
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A: Popularity of Organic Shredded Cheeses
+### Chart A: Mean Order Hour of Organic Shredded Cheeses Per Day of Week
 
 ```{r, echo = FALSE}
 instacart_df %>%
-  mutate(text_label = str_c("Name: ", product_name, '\nWeek Day: ', week_day)) %>%
-  plot_ly(x = ~week_day, y = ~mean_hour, type = "scatter", color = ~product_name, mode = "markers", text = ~text_label, alpha = 0.5) 
+  mutate(text_label = str_c("Name: ", product_name, 
+                            '\nWeek Day: ', week_day)) %>%
+  plot_ly(x = ~product_name, 
+          y = ~mean_hour, 
+          type = "scatter", 
+          color = ~week_day, 
+          mode = "markers", 
+          text = ~text_label, 
+          alpha = 0.5) 
+
+
 ```
 
 Column {data-width=350}
