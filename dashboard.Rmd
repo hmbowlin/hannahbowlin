@@ -23,8 +23,8 @@ knitr::opts_chunk$set(
 theme_set(theme_bw() + theme(legend.position = "bottom"))
 data("instacart")
 
-organic_cheddar_shreds = 
-  select(instacart, order_number, product_name, department, aisle, order_dow, order_hour_of_day) %>%
+organic_mozzarella_shreds = 
+  select(instacart, order_number, product_name, department, aisle, order_dow) %>%
   mutate(week_day = recode(order_dow, 
        "0" = "Sunday",
        "1" = "Monday",
@@ -37,7 +37,6 @@ organic_cheddar_shreds =
   filter(str_detect(product_name, "[S,s]hredded")) %>%
   filter(str_detect(product_name, "Mozzarella")) %>%
   group_by(week_day) %>%
-  mutate(mean_hour = mean(order_hour_of_day)) %>%
   count(product_name)
 ```
 
@@ -47,16 +46,19 @@ Column {data-width=650}
 ### Chart A: Average Number of Shredded Mozzarella Orders Per Day of Week
 
 ```{r, echo = FALSE}
-organic_cheddar_shreds %>%
+organic_mozzarella_shreds %>%
   mutate(text_label = str_c("Name: ", product_name, 
-                            '\nWeek Day: ', week_day)) %>%
-  plot_ly(x = ~week_day, 
-          y = ~n, 
+                            '\nWeek Day: ', week_day,
+                            '\nNumber Ordered: ', n)) %>%
+  plot_ly(x = ~n, 
+          y = ~week_day, 
           color = ~product_name, 
-          type = "scatter", 
+          colors = viridis_pal(option = "D")(3),
+          type = "scatter",
           mode = "markers",
           text = ~text_label,
-          alpha = 0.5) 
+          alpha = 0.5) %>%
+  layout(showlegend = FALSE)
 
 
 ```
