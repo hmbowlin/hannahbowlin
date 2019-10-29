@@ -39,7 +39,7 @@ Column {data-width=350}
 
 ### Chart A: Popularity of Shredded Cheese Types
 
-```{r}
+```{r, include = FALSE}
 instacart_df %>%
   mutate(text_label = str_c("Name: ", product_name, '\nCount: ', count)) %>%
   plot_ly(x = ~product_name, 
