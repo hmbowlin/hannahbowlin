@@ -12,6 +12,7 @@ library(tidyverse)
 library(plotly)
 library(p8105.datasets)
 library(flexdashboard)
+library(viridis)
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_chunk$set(
   fig.width = 6,
@@ -20,15 +21,6 @@ knitr::opts_chunk$set(
 )
 
 theme_set(theme_bw() + theme(legend.position = "bottom"))
-
-```
-
-Column {data-width=650}
------------------------------------------------------------------------
-
-### Chart A: Popularity of Shredded Cheese Types
-
-```{r, include = FALSE}
 data("instacart")
 
 instacart_df = 
@@ -39,7 +31,13 @@ instacart_df =
   group_by(product_name) %>%
   count(product_name) %>%
   mutate(count = n)
+
 ```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart A: Popularity of Shredded Cheese Types
 
 ```{r}
 instacart_df %>%
@@ -60,7 +58,18 @@ Column {data-width=350}
 ### Chart B
 
 ```{r}
-
+weather = 
+  rnoaa::meteo_pull_monitors(
+      c("USW00094728", "USC00519397", "USS0023B17S"),
+    var = c("PRCP", "TMIN", "TMAX"), 
+    date_min = "2016-01-01",
+    date_max = "2016-12-31") %>%
+  mutate(
+    name = recode(id, USW00094728 = "CentralPark_NY", 
+                      USC00519397 = "Waikiki_HA",
+                      USS0023B17S = "Waterhole_WA"),
+    tmin = tmin / 10,
+    tmax = tmax / 10)
 ```
 
 ### Chart C
