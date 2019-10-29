@@ -1,17 +1,38 @@
 ---
 title: "Dashboard"
-output: html_document
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
 ---
 
-```{r setup, echo = FALSE}
+```{r setup, include=FALSE}
 library(tidyverse)
 library(plotly)
 library(p8105.datasets)
+library(flexdashboard)
 ```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
 
 ```{r}
 data("instacart")
+```
 
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
 
 ```
 
+### Chart C
+
+```{r}
+
+```
