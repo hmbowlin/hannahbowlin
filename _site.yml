@@ -7,7 +7,7 @@ navbar:
       href: about.html
     - text: "Resume"
       href: resume.html
-    - icon: "Dashboard"
+    - text: "Dashboard"
       href: dashboard.html
     - icon: fa-envelope fa-lg
       href: mailto:<bowlin.hannah@columbia.edu>
