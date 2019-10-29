@@ -39,7 +39,7 @@ Column {data-width=350}
 
 ### Chart A: Popularity of Shredded Cheese Types
 
-```{r, include = FALSE}
+```{r, echo = FALSE}
 instacart_df %>%
   mutate(text_label = str_c("Name: ", product_name, '\nCount: ', count)) %>%
   plot_ly(x = ~product_name, 
@@ -57,7 +57,7 @@ Column {data-width=350}
 
 ### Chart B
 
-```{r}
+```{r, echo = FALSE}
 weather = 
   rnoaa::meteo_pull_monitors(
       c("USW00094728", "USC00519397", "USS0023B17S"),
