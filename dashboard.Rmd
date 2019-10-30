@@ -93,6 +93,8 @@ critical_manhattan %>%
   ) 
 ```
 
+Column {data-width=450}
+-----------------------------------------------------------------------
 ### Chart C: Average Italian Restaurant Scores by Grade Date
 
 ```{r, echo = FALSE}

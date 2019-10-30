@@ -7,3 +7,21 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+Column {data-width=450}
+-----------------------------------------------------------------------
+
+### Chart A: Average Score Per Street Name
+
+
+
+
+Column {data-width=450}
+-----------------------------------------------------------------------
+
+### Chart B: Distribution of Scores and Grades in Critically Flagged Restaurants
+
+
+Column {data-width=450}
+-----------------------------------------------------------------------
+### Chart C: Average Italian Restaurant Scores by Grade Date
