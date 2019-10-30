@@ -8,7 +8,11 @@ navbar:
     - text: "Resume"
       href: resume.html
     - text: "Dashboard"
-      href: dashboard.html
+      menu: 
+      - text: "Charts"
+        href: dashboard.html
+      - text: "Explanations"
+        href: explanations.html
     - icon: fa-envelope fa-lg
       href: mailto:<bowlin.hannah@columbia.edu>
     - icon: fa-linkedin fa-lg
