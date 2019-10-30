@@ -3,23 +3,20 @@ title: "explanations"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-
 Column {data-width=450}
 -----------------------------------------------------------------------
 
 ### Chart A: Average Score Per Street Name
 
-Chart A displays the average score of restaurants on each street. I grouped the data by street name and then averaged the score for each street. The data are color-coded by zipcode. My purpose for creating this graph was to see if there was a distinct score difference in different zipcodes. There was no difference 
+Chart A displays the average score of restaurants on each street. I grouped the data by street name and then averaged the score for each street. The data are color-coded by zipcode. My purpose for creating this graph was to see if there was a distinct score difference in different zipcodes. There was no difference between zipcodes to the naked eye, I would want to dive deeper into each street. I acknowledge that certain streets may stretch across different zipcodes. If I could I would recategorize my data into streets by zipcode. 
 
 
 Column {data-width=450}
 -----------------------------------------------------------------------
 
 ### Chart B: Distribution of Scores and Grades in Critically Flagged Restaurants
+
+Chart B shows the distribution of scores and grades among critically flagged restaurants. I was curious to see if the data were correctly categorizing grades as well as the distribution of grades and scores among restaurants with a critical flag. I was surprised that restaurants with an A grade can still have a critical flag.
 
 
 Column {data-width=450}

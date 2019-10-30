@@ -25,7 +25,7 @@ theme_set(theme_bw() + theme(legend.position = "bottom"))
 
 avg_score_street = 
   rest_inspec %>%
-  group_by(street) %>%
+  group_by(street, zipcode) %>%
   mutate(avg_score = mean(score)) %>%
   drop_na()
 
