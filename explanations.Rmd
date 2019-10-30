@@ -23,4 +23,4 @@ Column {data-width=450}
 -----------------------------------------------------------------------
 ### Chart C: Re-Opened Italian Restaurant Scores in 2017
 
-
+Wnat to see if there's a minimum score to be reopened (doesn't look like it, one score of 80 reopened pending, one score of just under 40 reopened after being closed)

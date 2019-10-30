@@ -56,7 +56,7 @@ italian_scores =
   rest_inspec %>%
   filter(str_detect(action, "re-opened") & cuisine_description == "Italian") %>%
   group_by(grade_date) %>%
-  filter(str_detect(grade_date, "2017"))
+  filter(str_detect(grade_date, "2017") & grade == "Z")
 
 italian_scores
 
