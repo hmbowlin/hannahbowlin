@@ -13,7 +13,7 @@ Column {data-width=450}
 
 ### Chart A: Average Score Per Street Name
 
-
+Chart A displays the average score of restaurants on each street. I grouped the data by street name and then averaged the score for each street. The data are color-coded by zipcode. My purpose for creating this graph was to see if there was a distinct score difference in different zipcodes. There was no difference 
 
 
 Column {data-width=450}

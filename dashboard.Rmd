@@ -88,7 +88,7 @@ critical_manhattan %>%
     y = ~score,
     color = ~grade,
     colors = viridis_pal(option = "D")(3),
-    type = "violin",
+    type = "box",
     alpha = 0.5
   ) 
 ```
