@@ -7,13 +7,15 @@ output:
     theme: flatly
 ---
 
-Welcome! 
+## Welcome! 
 
 My name is Hannah Bowlin. I'm an MPH student at Columbia University studying health policy and management and applied biostatistics. My professional interests include value-based payments, increasing revenue cycle efficiency, and improving healthcare data analytics. 
 
 In my spare time I love running, doing yoga, and following Minnesota sports (no matter how often they break my heart). 
 
-Enjoy a picture of my cabin in Minnesota and learn more about me [here] (about.html).
+Enjoy a picture of my cabin in Minnesota and learn more about me [here](about.html).
+
+
 <img src="images/cabin.jpeg" style="width:75%">
 
 

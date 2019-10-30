@@ -2,7 +2,7 @@
 title: "Dashboard"
 output: 
   flexdashboard::flex_dashboard:
-    orientation: rows
+    orientation: columns
     vertical_layout: fill
     theme: flatly
 ---
@@ -63,7 +63,7 @@ italian_scores
 
 ```
 
-Column {data-width=750}
+Column {data-width=650}
 -----------------------------------------------------------------------
 
 ### Chart A: Average Score of American Restaurants by Street and Zipcode in 2017
@@ -86,7 +86,7 @@ score_street %>%
 
 ```
 
-Column {data-width=450}
+Column {data-width=350}
 -----------------------------------------------------------------------
 
 ### Chart B: Distribution of Scores in Queens Pizza Restaurants in 2017
@@ -105,8 +105,6 @@ critical_pizza_queens %>%
   ) 
 ```
 
-Column {data-width=450}
------------------------------------------------------------------------
 ### Chart C: Re-Opened Italian Restaurant Scores in 2017
 
 ```{r, echo = FALSE}

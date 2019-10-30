@@ -11,7 +11,7 @@ I am a graduate student at Columbia University's Mailman School of Public Health
 Upon graduation I am hoping to work on fraud, waste, and abuse in the healthcare system through data analytics and innovative, policy-driven problem solving. 
 
 ## Personal
-I grew up in Minneapolis, Minnesota. My interests include running, yoga, and the Minnesota Twins. I have two Newfoundland dogs:
+I have two Newfoundland dogs:
 
 ### Mayzie
 <img src="images/Mayzie.jpeg" style="width:75%">
