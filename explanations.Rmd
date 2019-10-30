@@ -8,7 +8,7 @@ Column {data-width=450}
 
 ### Chart A: Distribution of Scores Per Street Name in 2017
 
-Chart A displays the average score of American restaurants on each street. I grouped the data by cuisine type (American), street name and then averaged the score for each street. The data are color-coded by zipcode. My purpose for creating this graph was to see if there was a distinct score difference in different zipcodes. There was no difference between zipcodes to the naked eye, I would want to dive deeper into each street. I acknowledge that certain streets may stretch across different zipcodes. If I could I would recategorize my data into streets by zipcode. 
+Chart A displays the scores of American restaurants 
 
 
 Column {data-width=450}

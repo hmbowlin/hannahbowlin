@@ -36,7 +36,7 @@ rest_inspec =
 score_street = 
   rest_inspec %>%
   group_by(zipcode) %>%
-  filter(cuisine_description == "American" & boro == "manhattan") %>%
+  filter(cuisine_description == "Seafood" & boro == "manhattan") %>%
   filter(str_detect(inspection_date,"2017")) 
 
 score_street
@@ -65,7 +65,7 @@ italian_scores
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A: Average Score of American Restaurants by Street and Zipcode in 2017
+### Chart A: Distribution of Scores of Manhattan Seafood Restaurants by Zipcode in 2017
 
 ```{r, echo = FALSE}
 score_street %>%
