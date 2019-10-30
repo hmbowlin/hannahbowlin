@@ -10,7 +10,7 @@ navbar:
     - text: "Dashboard"
       menu: 
       - text: "Charts"
-        href: dashboard.html
+        href: dashboard2.html
       - text: "Explanations"
         href: explanations.html
     - icon: fa-envelope fa-lg
