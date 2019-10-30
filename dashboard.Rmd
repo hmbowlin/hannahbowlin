@@ -40,6 +40,16 @@ critical_manhattan =
 
 critical_manhattan
 
+##Chart C
+italian_scores = 
+  rest_inspec %>%
+  drop_na() %>%
+  filter(str_detect(cuisine_description, "[I,i]talian")) %>%
+  group_by(grade_date) %>%
+  mutate(avg_score = mean(score))
+
+italian_scores
+
 ```
 
 Column {data-width=450}
@@ -85,20 +95,11 @@ critical_manhattan %>%
 
 ### Chart C: Average Italian Restaurant Scores by Grade Date
 
-```{r}
-italian_scores = 
-  rest_inspec %>%
-  drop_na() %>%
-  filter(str_detect(cuisine_description, "[I,i]talian")) %>%
-  group_by(grade_date) %>%
-  mutate(avg_score = mean(score))
-
-italian_scores
-
+```{r, echo = FALSE}
 plot_ly(italian_scores,
         x = ~grade_date,
         y = ~avg_score,
-        color = ~grade_date,
+        color = ~grade,
         colors = viridis_pal(option = "D")(3),
         type = "bar")
 ```
