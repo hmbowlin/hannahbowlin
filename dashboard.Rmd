@@ -52,7 +52,7 @@ italian_scores
 
 ```
 
-Column {data-width=450}
+Column {data-width=750}
 -----------------------------------------------------------------------
 
 ### Chart A: Average Score Per Street Name
