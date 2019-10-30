@@ -67,7 +67,7 @@ Column {data-width=650}
 
 ### Chart A: Average Score of American Restaurants by Street and Zipcode in 2017
 
-```{r}
+```{r, echo = FALSE}
 score_street %>%
   mutate(text_label = str_c("Name: ", dba, 
                             '\nScore: ', score)) %>%
@@ -88,7 +88,7 @@ Column {data-width=350}
 
 ### Chart B: Distribution of Scores in Queens Pizza Restaurants in 2017
 
-```{r}
+```{r, echo = FALSE}
 critical_pizza_queens %>%
   mutate(grade = forcats::fct_relevel(grade, c("A", "B", "C", "P", "Z", "Not Yet Graded"))) %>%
   plot_ly(
@@ -103,7 +103,7 @@ critical_pizza_queens %>%
 
 ### Chart C: Re-Opened Italian Restaurant Scores in 2017
 
-```{r}
+```{r, echo = FALSE}
 italian_scores %>%
   mutate(text_label = str_c("Name: ", dba, 
                             '\nGrade Date: ', grade_date,
