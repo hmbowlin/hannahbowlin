@@ -21,6 +21,15 @@ knitr::opts_chunk$set(
 )
 
 theme_set(theme_bw() + theme(legend.position = "bottom"))
+## Chart A
+
+avg_score_street = 
+  rest_inspec %>%
+  group_by(street) %>%
+  mutate(avg_score = mean(score)) %>%
+  drop_na()
+
+avg_score_street
 
 ##Chart B
 critical_manhattan = 
@@ -30,15 +39,27 @@ critical_manhattan =
   drop_na()
 
 critical_manhattan
+
 ```
 
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A:  
+### Chart A: Average Score Per Street Name
 
 ```{r, echo = FALSE}
-data("rest_inspec")
+  
+avg_score_street %>%
+  mutate(text_label = str_c("Street Name: ", street, '\nAvg Score: ', avg_score)) %>%
+  plot_ly(
+    x = ~street,
+    y = ~avg_score,
+    color = ~zipcode,
+    type = "scatter",
+    mode = "markers",
+    text = ~text_label,
+    alpha = 0.5
+  )
 
 ```
 
