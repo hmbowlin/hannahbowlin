@@ -21,36 +21,43 @@ knitr::opts_chunk$set(
 )
 
 theme_set(theme_bw() + theme(legend.position = "bottom"))
+
+
+data("rest_inspec")
+
+rest_inspec = 
+  rest_inspec%>%
+  janitor::clean_names() %>%
+  mutate(boro = str_to_lower(boro)) %>%
+  filter(inspection_date != "01/01/1900") %>%
+  drop_na()
+  
 ## Chart A
 
-avg_score_street = 
+score_street = 
   rest_inspec %>%
-  group_by(street, zipcode) %>%
-  filter(cuisine_description == "American") %>%
-  mutate(avg_score = mean(score)) %>%
-  filter(str_detect(inspection_date,"2017")) %>%
-  drop_na()
+  group_by(zipcode) %>%
+  filter(cuisine_description == "American" & boro == "manhattan") %>%
+  filter(str_detect(inspection_date,"2017")) 
 
-avg_score_street
+score_street
 
 ##Chart B
-critical_manhattan = 
+critical_pizza_queens = 
   rest_inspec %>%
-  select(-action) %>%
-  filter(critical_flag == "Critical") %>%
-  filter(str_detect(inspection_date,"2017")) %>%
-  drop_na()
+  filter(critical_flag == "Critical" & 
+           boro == "queens" & 
+           cuisine_description == "Pizza") %>%
+  filter(str_detect(inspection_date,"2016")) 
 
-critical_manhattan
+critical_pizza_queens
 
 ##Chart C
 italian_scores = 
   rest_inspec %>%
-  drop_na() %>%
-  filter(str_detect(cuisine_description, "[I,i]talian")) %>%
+  filter(str_detect(action, "re-opened") & cuisine_description == "Italian") %>%
   group_by(grade_date) %>%
-  mutate(avg_score = mean(score)) %>%
-  filter(str_detect(inspection_date,"2016"))
+  filter(str_detect(grade_date, "2017"))
 
 italian_scores
 
@@ -63,14 +70,13 @@ Column {data-width=750}
 
 ```{r, echo = FALSE}
   
-avg_score_street %>%
-  mutate(text_label = str_c("Street Name: ", street, 
-                            '\nName: ', dba, 
-                            '\nAvg Score: ', avg_score)) %>%
+score_street %>%
+  mutate(text_label = str_c("Name: ", dba, 
+                            '\nScore: ', score)) %>%
   plot_ly(
-    x = ~street,
-    y = ~avg_score,
-    color = ~zipcode,
+    x = ~zipcode,
+    y = ~score,
+    color = ~grade,
     colors = viridis_pal(option = "C")(3),
     type = "scatter",
     mode = "markers",
@@ -83,11 +89,11 @@ avg_score_street %>%
 Column {data-width=450}
 -----------------------------------------------------------------------
 
-### Chart B: Distribution of Scores and Grades in Critically Flagged Restaurants in 2017
+### Chart B: Distribution of Scores and Grades in Critically Flagged Queens Pizza Restaurants in 2017
 
 ```{r, echo = FALSE}
 
-critical_manhattan %>%
+critical_pizza_queens %>%
   mutate(grade = forcats::fct_relevel(grade, c("A", "B", "C", "P", "Z", "Not Yet Graded"))) %>%
   plot_ly(
     x = ~grade,
@@ -101,14 +107,16 @@ critical_manhattan %>%
 
 Column {data-width=450}
 -----------------------------------------------------------------------
-### Chart C: Average Italian Restaurant Scores by Grade Date in 2016
+### Chart C: Re-Opened Italian Restaurant Scores in 2017
 
 ```{r, echo = FALSE}
 italian_scores %>%
-  mutate(text_label = str_c("Grade Date: ", grade_date, '\nGrade: ', grade, '\nAverage Score: ', avg_score)) %>%
-plot_ly(
-        x = ~grade_date,
-        y = ~avg_score,
+  mutate(text_label = str_c("Name: ", dba, 
+                            '\nGrade Date: ', grade_date,
+                            '\nGrade: ', grade, 
+                            '\nFlag: ', critical_flag)) %>%
+plot_ly(x = ~inspection_date,
+        y = ~score,
         color = ~grade,
         colors = viridis_pal(option = "D")(3),
         type = "bar",
