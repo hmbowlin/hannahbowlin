@@ -98,10 +98,13 @@ Column {data-width=450}
 ### Chart C: Average Italian Restaurant Scores by Grade Date
 
 ```{r, echo = FALSE}
-plot_ly(italian_scores,
+italian_scores %>%
+  mutate(text_label = str_c("Grade Date: ", grade_date, '\nGrade: ', grade, '\nAverage Score: ', avg_score)) %>%
+plot_ly(
         x = ~grade_date,
         y = ~avg_score,
         color = ~grade,
         colors = viridis_pal(option = "D")(3),
-        type = "bar")
+        type = "bar",
+        text = ~text_label)
 ```
