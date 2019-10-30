@@ -42,7 +42,7 @@ critical_manhattan
 
 ```
 
-Column {data-width=650}
+Column {data-width=450}
 -----------------------------------------------------------------------
 
 ### Chart A: Average Score Per Street Name
@@ -55,15 +55,16 @@ avg_score_street %>%
     x = ~street,
     y = ~avg_score,
     color = ~zipcode,
+    colors = viridis_pal(option = "C")(3),
     type = "scatter",
     mode = "markers",
     text = ~text_label,
     alpha = 0.5
-  )
+  ) 
 
 ```
 
-Column {data-width=350}
+Column {data-width=450}
 -----------------------------------------------------------------------
 
 ### Chart B: Distribution of Scores and Grades in Critically Flagged Restaurants
@@ -71,20 +72,33 @@ Column {data-width=350}
 ```{r, echo = FALSE}
 
 critical_manhattan %>%
-  mutate(text_label = str_c("Name: ", dba, '\nScore: ', score)) %>%
   mutate(grade = forcats::fct_relevel(grade, c("A", "B", "C", "P", "Z", "Not Yet Graded"))) %>%
   plot_ly(
     x = ~grade,
     y = ~score,
     color = ~grade,
+    colors = viridis_pal(option = "D")(3),
     type = "violin",
-    text = ~text_label,
     alpha = 0.5
   ) 
 ```
 
-### Chart C
+### Chart C: Average Italian Restaurant Scores by Grade Date
 
 ```{r}
+italian_scores = 
+  rest_inspec %>%
+  drop_na() %>%
+  filter(str_detect(cuisine_description, "[I,i]talian")) %>%
+  group_by(grade_date) %>%
+  mutate(avg_score = mean(score))
 
+italian_scores
+
+plot_ly(italian_scores,
+        x = ~grade_date,
+        y = ~avg_score,
+        color = ~grade_date,
+        colors = viridis_pal(option = "D")(3),
+        type = "bar")
 ```
