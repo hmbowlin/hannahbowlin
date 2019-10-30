@@ -54,7 +54,7 @@ critical_pizza_queens
 ##Chart C
 italian_scores = 
   rest_inspec %>%
-  filter(str_detect(action, "re-opened") & cuisine_description == "Italian") %>%
+  filter(str_detect(action, "re-opened") & boro == "brooklyn") %>%
   group_by(grade_date) %>%
   filter(str_detect(grade_date, "2017") & grade == "Z")
 
@@ -112,7 +112,7 @@ italian_scores %>%
                             '\nFlag: ', critical_flag)) %>%
 plot_ly(x = ~inspection_date,
         y = ~score,
-        color = ~grade,
+        color = ~cuisine_description,
         colors = viridis_pal(option = "D")(3),
         type = "bar",
         text = ~text_label)
