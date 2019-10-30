@@ -2,6 +2,7 @@
 title: "about"
 output: html_document
 ---
+<img src="images/headshot.jpeg" style="width:75%">
 
 ## Academic
 I am a graduate student at Columbia University's Mailman School of Public Health. I am studying Health Policy and Management with a concentration in Applied Biostatistics. My data skills include R, SAS, SQL, Microsoft Excel and Access, and STATA. 

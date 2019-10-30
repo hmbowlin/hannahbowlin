@@ -2,7 +2,7 @@
 title: "Dashboard"
 output: 
   flexdashboard::flex_dashboard:
-    orientation: columns
+    orientation: rows
     vertical_layout: fill
     theme: flatly
 ---
@@ -89,7 +89,7 @@ score_street %>%
 Column {data-width=450}
 -----------------------------------------------------------------------
 
-### Chart B: Distribution of Scores and Grades in Critically Flagged Queens Pizza Restaurants in 2017
+### Chart B: Distribution of Scores in Queens Pizza Restaurants in 2017
 
 ```{r, echo = FALSE}
 
