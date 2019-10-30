@@ -28,6 +28,7 @@ avg_score_street =
   group_by(street, zipcode) %>%
   filter(cuisine_description == "American") %>%
   mutate(avg_score = mean(score)) %>%
+  filter(str_detect(inspection_date,"2017")) %>%
   drop_na()
 
 avg_score_street
@@ -56,7 +57,7 @@ italian_scores
 Column {data-width=750}
 -----------------------------------------------------------------------
 
-### Chart A: Average Score of American Restaurants by Street Name
+### Chart A: Average Score of American Restaurants by Street and Zipcode in 2017
 
 ```{r, echo = FALSE}
   
