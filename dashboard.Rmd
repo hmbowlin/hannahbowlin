@@ -26,6 +26,7 @@ theme_set(theme_bw() + theme(legend.position = "bottom"))
 avg_score_street = 
   rest_inspec %>%
   group_by(street, zipcode) %>%
+  filter(cuisine_description == "American") %>%
   mutate(avg_score = mean(score)) %>%
   drop_na()
 
@@ -55,12 +56,14 @@ italian_scores
 Column {data-width=750}
 -----------------------------------------------------------------------
 
-### Chart A: Average Score Per Street Name
+### Chart A: Average Score of American Restaurants by Street Name
 
 ```{r, echo = FALSE}
   
 avg_score_street %>%
-  mutate(text_label = str_c("Street Name: ", street, '\nAvg Score: ', avg_score)) %>%
+  mutate(text_label = str_c("Street Name: ", street, 
+                            '\nName: ', dba, 
+                            '\nAvg Score: ', avg_score)) %>%
   plot_ly(
     x = ~street,
     y = ~avg_score,
