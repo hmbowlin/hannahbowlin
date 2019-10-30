@@ -21,6 +21,15 @@ knitr::opts_chunk$set(
 )
 
 theme_set(theme_bw() + theme(legend.position = "bottom"))
+
+##Chart B
+critical_manhattan = 
+  rest_inspec %>%
+  select(-action) %>%
+  filter(critical_flag == "Critical") %>%
+  drop_na()
+
+critical_manhattan
 ```
 
 Column {data-width=650}
@@ -40,15 +49,6 @@ Column {data-width=350}
 
 ```{r, echo = FALSE}
 
-critical_manhattan = 
-  rest_inspec %>%
-  select(-action) %>%
-  filter(critical_flag == "Critical") %>%
-  drop_na()
-  
-
-critical_manhattan
-
 critical_manhattan %>%
   mutate(text_label = str_c("Name: ", dba, '\nScore: ', score)) %>%
   mutate(grade = forcats::fct_relevel(grade, c("A", "B", "C", "P", "Z", "Not Yet Graded"))) %>%
@@ -60,12 +60,6 @@ critical_manhattan %>%
     text = ~text_label,
     alpha = 0.5
   ) 
-  
-
-
-  
-
-
 ```
 
 ### Chart C
