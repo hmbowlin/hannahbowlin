@@ -8,7 +8,7 @@ Column {data-width=450}
 
 ### Chart A: Distribution of Scores of Manhattan Seafood Restaurants by Street in 2017
 
-Chart A displays the scores of Seafood restaurants by street in Manhattan in 2017. I wanted to see if 
+Chart A displays the scores of Seafood restaurants by street in Manhattan in 2017. I wanted to see if there score was somehow related to street the restaurant is on. I don't see too much of a pattern, but it is pretty amazing that a score of less than 15 garners an A. It's also concerning that a restaurant can be re-opened with a score of 24 (Live Bait Bar & Restaurant) while Brothers Fish Market was re-opened with a score of 2 (seems more reasonable). 
 
 
 Column {data-width=450}
@@ -16,11 +16,11 @@ Column {data-width=450}
 
 ### Chart B: Distribution of Scores in Queens Pizza Restaurants in 2017
 
-Chart B shows the distribution of scores and grades among critically flagged restaurants. I was curious to see if the data were correctly categorizing grades as well as the distribution of grades and scores among restaurants with a critical flag. I was surprised that restaurants with an A grade can still have a critical flag.
+Chart B shows the distribution of scores among critically flagged pizza restaurants in Queens in 2017. I was curious to see if the data were correctly categorizing grades as well as the distribution of scores among pizza restaurants with a critical flag. I was surprised that restaurants with an A grade can still have a critical flag. It good to see that the scores are correctly bucketing into the appropriate grade. I am amazed that restaurants can have a score of 51 and operate. I do not even want to know what their kitchens look like.
 
 
 Column {data-width=450}
 -----------------------------------------------------------------------
-### Chart C: Re-Opened Brooklyn Restaurant Scores in 2017
+### Chart C: Histogram of Re-Opened Brooklyn Restaurants in September 2017
 
-Wnat to see if there's a minimum score to be reopened (doesn't look like it, one score of 80 reopened pending, one score of just under 40 reopened after being closed)
+Chart C displays the types of cuisine in resturants that were re-opened in September, 2017. I wanted to see the average score of each type of cuisine that was being reopened and to see if there was any pattern in re-openings. There doesn't seem to be a maximum score needed to re-open a restaurant. The range in average scores go from 2 (Caribbean and Mexican restaurants) to 7.25 (Chinese restaurants). Still, 7.25 is much less than the cut-off for an A (13).

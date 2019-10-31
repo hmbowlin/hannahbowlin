@@ -28,7 +28,7 @@ rest_inspec =
   rest_inspec%>%
   janitor::clean_names() %>%
   mutate(boro = str_to_lower(boro)) %>%
-  filter(inspection_date != "01/01/1900") %>%
+  filter(inspection_date != "01/01/1990") %>%
   drop_na()
   
 ## Chart A
@@ -54,9 +54,9 @@ critical_pizza_queens
 ##Chart C
 brooklyn_scores = 
   rest_inspec %>%
-  filter(str_detect(action, "re-opened") & boro == "brooklyn") %>%
+  filter(str_detect(action, "re-opened") & grade == "Z") %>%
   group_by(grade_date) %>%
-  filter(str_detect(grade_date, "2017-09") & grade == "Z") %>%
+  filter(str_detect(grade_date, "2017-09") & boro == "brooklyn") %>%
   mutate(avg_score = mean(score))
 
 brooklyn_scores
