@@ -3,7 +3,7 @@ title: "Data Source"
 output: html_document
 ---
 
-# Data 
+## Data 
 
 * The data in my dashboard come from [DOHMH NYC Inspections](https://dev.socrata.com/foundry/data.cityofnewyork.us/43nn-pn8j). 
 
@@ -11,7 +11,7 @@ output: html_document
 
 * The format of the data was given to us in [P8105](https://p8105.com/dataset_restaurant_inspections.html).
 
-# Code
+## Code
 
 * The code I used to wrangle the data and render it for each chart on the dashboard is as follows:
 
@@ -24,7 +24,7 @@ rest_inspec =
   filter(inspection_date != "01/01/1990") %>%
   drop_na()
   
-## Chart A
+### Chart A
 
 score_street = 
   rest_inspec %>%
@@ -34,7 +34,8 @@ score_street =
 
 score_street
 
-### Plot A
+**Plot A**
+
 score_street %>%
   mutate(text_label = str_c("Name: ", dba, 
                             '\nScore: ', score,
@@ -49,7 +50,7 @@ score_street %>%
     text = ~text_label,
     alpha = 0.5)
     
-## Chart B
+### Chart B
 critical_pizza = 
   rest_inspec %>%
   filter(critical_flag == "Critical" & 
@@ -59,7 +60,8 @@ critical_pizza =
 
 critical_pizza
 
-### Plot B
+**Plot B**
+
 critical_pizza %>%
   mutate(grade = forcats::fct_relevel(grade, c("A", "B", "C", "P", "Z", "Not Yet Graded"))) %>%
   plot_ly(
@@ -81,7 +83,8 @@ brooklyn_scores =
 
 brooklyn_scores
 
-### Plot C
+**Plot C**
+
 brooklyn_scores %>%
   mutate(text_label = str_c("Type: ", cuisine_description, 
                             '\nAverage Score: ', avg_score)) %>%

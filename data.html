@@ -293,10 +293,10 @@ $(document).ready(function () {
       <a href="dashboard2.html">Charts</a>
     </li>
     <li>
-      <a href="explanations.html">Explanations</a>
+      <a href="data.html">Data Source/ Code</a>
     </li>
     <li>
-      <a href="data.html">Data Source</a>
+      <a href="explanations.html">Explanations</a>
     </li>
   </ul>
 </li>
@@ -332,36 +332,33 @@ $(document).ready(function () {
 </div>
 
 
-<div id="data" class="section level1">
-<h1>Data</h1>
+<div id="data" class="section level2">
+<h2>Data</h2>
 <ul>
 <li><p>The data in my dashboard come from <a href="https://dev.socrata.com/foundry/data.cityofnewyork.us/43nn-pn8j">DOHMH NYC Inspections</a>.</p></li>
 <li><p>The codebook can be accessed <a href="codebook.xlsx">here</a>.</p></li>
 <li><p>The format of the data was given to us in <a href="https://p8105.com/dataset_restaurant_inspections.html">P8105</a>.</p></li>
 </ul>
 </div>
-<div id="code" class="section level1">
-<h1>Code</h1>
+<div id="code" class="section level2">
+<h2>Code</h2>
 <ul>
 <li>The code I used to wrangle the data and render it for each chart on the dashboard is as follows:</li>
 </ul>
 <p>data(“rest_inspec”)</p>
 <p>rest_inspec = rest_inspec%&gt;% janitor::clean_names() %&gt;% mutate(boro = str_to_lower(boro)) %&gt;% filter(inspection_date != “01/01/1990”) %&gt;% drop_na()</p>
-<div id="chart-a" class="section level2">
-<h2>Chart A</h2>
+<div id="chart-a" class="section level3">
+<h3>Chart A</h3>
 <p>score_street = rest_inspec %&gt;% group_by(street) %&gt;% filter(cuisine_description == “Seafood” &amp; boro == “manhattan”) %&gt;% filter(str_detect(inspection_date,“2017”))</p>
 <p>score_street</p>
-<div id="plot-a" class="section level3">
-<h3>Plot A</h3>
+<p><strong>Plot A</strong></p>
 <p>score_street %&gt;% mutate(text_label = str_c(“Name:”, dba, ‘:’, score, ‘:’, grade)) %&gt;% plot_ly( x = ~street, y = ~score, color = ~grade, colors = viridis_pal(option = “C”)(3), type = “scatter”, mode = “markers”, text = ~text_label, alpha = 0.5)</p>
 </div>
-</div>
-<div id="chart-b" class="section level2">
-<h2>Chart B</h2>
+<div id="chart-b" class="section level3">
+<h3>Chart B</h3>
 <p>critical_pizza = rest_inspec %&gt;% filter(critical_flag == “Critical” &amp; cuisine_description == “Pizza”) %&gt;% filter(str_detect(inspection_date,“2016”)) %&gt;% group_by(boro)</p>
 <p>critical_pizza</p>
-<div id="plot-b" class="section level3">
-<h3>Plot B</h3>
+<p><strong>Plot B</strong></p>
 <p>critical_pizza %&gt;% mutate(grade = forcats::fct_relevel(grade, c(“A”, “B”, “C”, “P”, “Z”, “Not Yet Graded”))) %&gt;% plot_ly( x = ~boro, y = ~score, color = ~boro, colors = viridis_pal(option = “D”)(3), type = “box”, alpha = 0.5 )</p>
 </div>
 </div>
@@ -369,11 +366,8 @@ $(document).ready(function () {
 <h2>Chart C</h2>
 <p>brooklyn_scores = rest_inspec %&gt;% filter(str_detect(action, “re-opened”) &amp; grade == “Z”) %&gt;% group_by(grade_date) %&gt;% filter(str_detect(grade_date, “2017-09”) &amp; boro == “brooklyn”) %&gt;% mutate(avg_score = mean(score))</p>
 <p>brooklyn_scores</p>
-<div id="plot-c" class="section level3">
-<h3>Plot C</h3>
+<p><strong>Plot C</strong></p>
 <p>brooklyn_scores %&gt;% mutate(text_label = str_c(“Type:”, cuisine_description, ‘Score:’, avg_score)) %&gt;% plot_ly(x = ~cuisine_description, color = ~cuisine_description, colors = viridis_pal(option = “D”)(3), type = “histogram”, text = ~text_label)</p>
-</div>
-</div>
 </div>
 
 
