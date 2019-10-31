@@ -6,9 +6,9 @@ output: html_document
 Column {data-width=450}
 -----------------------------------------------------------------------
 
-### Chart A: Distribution of Scores Per Street Name in 2017
+### Chart A: Distribution of Scores of Manhattan Seafood Restaurants by Street in 2017
 
-Chart A displays the scores of American restaurants 
+Chart A displays the scores of Seafood restaurants 
 
 
 Column {data-width=450}
@@ -21,6 +21,6 @@ Chart B shows the distribution of scores and grades among critically flagged res
 
 Column {data-width=450}
 -----------------------------------------------------------------------
-### Chart C: Re-Opened Italian Restaurant Scores in 2017
+### Chart C: Re-Opened Brooklyn Restaurant Scores in 2017
 
 Wnat to see if there's a minimum score to be reopened (doesn't look like it, one score of 80 reopened pending, one score of just under 40 reopened after being closed)

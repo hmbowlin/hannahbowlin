@@ -35,7 +35,7 @@ rest_inspec =
 
 score_street = 
   rest_inspec %>%
-  group_by(zipcode) %>%
+  group_by(street) %>%
   filter(cuisine_description == "Seafood" & boro == "manhattan") %>%
   filter(str_detect(inspection_date,"2017")) 
 
@@ -52,20 +52,21 @@ critical_pizza_queens =
 critical_pizza_queens
 
 ##Chart C
-statenisland_scores = 
+brooklyn_scores = 
   rest_inspec %>%
-  filter(str_detect(action, "re-opened") & boro == "staten island") %>%
+  filter(str_detect(action, "re-opened") & boro == "brooklyn") %>%
   group_by(grade_date) %>%
-  filter(str_detect(grade_date, "2017") & grade == "Z")
+  filter(str_detect(grade_date, "2017-09") & grade == "Z")
 
-statenisland_scores
+brooklyn_scores
+
 
 ```
 
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A: Distribution of Scores of Manhattan Seafood Restaurants by Zipcode in 2017
+### Chart A: Distribution of Scores of Manhattan Seafood Restaurants by Street in 2017
 
 ```{r, echo = FALSE}
 score_street %>%
@@ -73,15 +74,14 @@ score_street %>%
                             '\nScore: ', score,
                             '\nGrade: ', grade)) %>%
   plot_ly(
-    x = ~zipcode,
+    x = ~street,
     y = ~score,
     color = ~grade,
     colors = viridis_pal(option = "C")(3),
     type = "scatter",
     mode = "markers",
     text = ~text_label,
-    alpha = 0.5
-  ) 
+    alpha = 0.5)
 ```
 
 Column {data-width=350}
@@ -102,10 +102,10 @@ critical_pizza_queens %>%
   ) 
 ```
 
-### Chart C: Re-Opened Staten Island Restaurant Scores in 2017
+### Chart C: Re-Opened Brooklyn Restaurant Scores in 2017
 
 ```{r, echo = FALSE}
-statenisland_scores %>%
+brooklyn_scores %>%
   mutate(text_label = str_c("Name: ", dba, 
                             '\nGrade Date: ', grade_date,
                             '\nGrade: ', grade, 
