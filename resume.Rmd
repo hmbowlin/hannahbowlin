@@ -7,19 +7,23 @@ output: html_document
 bowlin.hannah@columbia.edu • 952-693-8236
 
 # EDUCATION
-**Columbia University, Mailman School of Public Health, New York, NY**				        Expected May 2020
+**Columbia University, Mailman School of Public Health, New York, NY**				         Expected May 2020
 
-Master of Public Health (MPH), department of Health Policy and Management, certificate in Applied Biostatistics
+_Master of Public Health (MPH) in Health Policy and Management, Certificate in Applied Biostatistics_
 
-**Relevant Coursework:** Accounting and Budgeting, Empirical Analysis Methods, Quantitative and Qualitative Methods, Health Policy & Political Analysis, Health Economics, Health Systems: Comparative and United States, Applied Regression, Data Science, Analysis of Categorical Data, Relational Databases and SQL Programming
+* **Relevant Coursework:** Accounting and Budgeting, Empirical Analysis Methods, Quantitative and Qualitative Methods, Health Policy & Political Analysis, Health Economics, Health Systems: Comparative and United States, Applied Regression, Data Science, Analysis of Categorical Data, Relational Databases and SQL Programming
 
-**Projects:** Financial Analysis of CRS; Empirical Analysis of Public Health Access Improvements through Medicaid Expansion in Idaho; Policy Memo on Medicare and Medicaid Drug Transparency Pricing; Case Analysis of Global Health Partners
+* **Projects:** Financial Analysis of CRS; Empirical Analysis of Public Health Access Improvements through Medicaid Expansion in Idaho; Policy Memo on Medicare and Medicaid Drug Transparency Pricing; Case Analysis of Global Health Partners
 
-**Boston College, Chestnut Hill, MA**                    										                  May 2017
+**Boston College, Chestnut Hill, MA**                    										                    May 2017
 
-Bachelor of Arts, major in French, minor in Medical Humanities
-Honors: Dean’s List; Pi Delta Phi Honor Society
-University de Grenoble, Study Abroad Fall 2015, Diplôme Approfondi de la langue Française, Niveau C1 
+_Bachelor of Arts, Major in French, Minor in Medical Humanities_
+
+ * Honors: Dean’s List; Pi Delta Phi Honor Society
+
+**University de Grenoble, Grenoble, France**                                                   Fall 2015
+
+_Diplôme Approfondi de la langue Française, Niveau C1_
 
 # EXPERIENCE
 **Fidelis Care, New York City, NY- Graduate Intern, Internal Consulting Team**	   June 2019-August 2019
@@ -54,7 +58,7 @@ University de Grenoble, Study Abroad Fall 2015, Diplôme Approfondi de la langue
 *	Consulted on the Office of Student Affairs’ Student Code of Conduct to better support students in their health and safety decision-making on campus
 
 # SKILLS
-* Technical: SQL, STATA, SAS, R, Proficiency with Microsoft Office (Word, Excel, PowerPoint, Access)
-* Languages: Fluent in French and Spanish 
-* Interests: Acapella music, Running half and full marathons, Minnesota Twins
+* _Technical_: SQL, STATA, SAS, R, Proficiency with Microsoft Office (Word, Excel, PowerPoint, Access)
+* _Languages_: Fluent in French and Spanish 
+* _Interests_: Acapella music, Running half and full marathons, Minnesota Twins
 
