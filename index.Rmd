@@ -13,11 +13,14 @@ My name is Hannah Bowlin. I'm an MPH student at Columbia University studying hea
 
 In my spare time I love running, doing yoga, and following Minnesota sports (no matter how often they break my heart). 
 
-Enjoy a picture of my cabin on the St. Croix River and learn more about me [here](about.html).
+Enjoy a picture of my cabin on the St. Croix River, learn more about me [here](about.html), or read my resume [here](resume.html).
 
 
 <img src="images/cabin.jpeg" style="width:90%">
 
+
+
+This website was created using RStudio in an RMarkDown through Github.
 
 
 
