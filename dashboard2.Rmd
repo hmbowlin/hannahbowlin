@@ -1,5 +1,5 @@
 ---
-title: "Dashboard"
+title: "Dashboard: Food Inspection"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -88,7 +88,7 @@ score_street %>%
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B: Distribution of Scores in Pizza Restaurants in 2016
+### Chart B: Distribution of Scores in Critically Flagged Pizza Restaurants in 2016
 
 ```{r, echo = FALSE}
 critical_pizza %>%
