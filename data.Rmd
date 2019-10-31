@@ -1,0 +1,10 @@
+---
+title: "Data Source"
+output: html_document
+---
+
+The data in my dashboard come from [DOHMH NYC Inspections](https://dev.socrata.com/foundry/data.cityofnewyork.us/43nn-pn8j). 
+
+The codebook can be accessed [here](codebook.xlsx). 
+
+The format of the data was given to us in [P8105](https://p8105.com/dataset_restaurant_inspections.html).
