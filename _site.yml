@@ -11,10 +11,10 @@ navbar:
       menu: 
       - text: "Charts"
         href: dashboard2.html
+      - text: "Data Source/ Code"
+        href: "data.html"
       - text: "Explanations"
         href: explanations.html
-      - text: "Data Source"
-        href: "data.html"
     - icon: fa-envelope fa-lg
       href: mailto:<bowlin.hannah@columbia.edu>
     - icon: fa-linkedin fa-lg

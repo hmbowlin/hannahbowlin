@@ -11,16 +11,18 @@ output:
 
 My name is Hannah Bowlin. I'm an MPH student at Columbia University studying health policy and management and applied biostatistics. My professional interests include value-based payments, increasing revenue cycle efficiency, and improving healthcare data analytics. 
 
+Learn more about me [here](about.html), read my resume [here](resume.html), or just enjoy this picture of the St. Croix River in August.
+
+<img align="center" img src="images/cabin.jpeg" style="width:75%"/>  
+
+### Hobbies
 In my spare time I love running, doing yoga, and following Minnesota sports (no matter how often they break my heart). 
 
-Enjoy a picture of my cabin on the St. Croix River, learn more about me [here](about.html), or read my resume [here](resume.html).
+<img align="center" img src="images/nycmar.jpg" style="width:75%"/>
+
+ _NYC Marathon 2018_
 
 
-<img src="images/cabin.jpeg" style="width:90%">
-
-
-
-This website was created using RStudio in an RMarkDown through Github.
 
 
 

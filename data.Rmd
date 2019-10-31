@@ -2,9 +2,90 @@
 title: "Data Source"
 output: html_document
 ---
+# Data 
 
-The data in my dashboard come from [DOHMH NYC Inspections](https://dev.socrata.com/foundry/data.cityofnewyork.us/43nn-pn8j). 
+* The data in my dashboard come from [DOHMH NYC Inspections](https://dev.socrata.com/foundry/data.cityofnewyork.us/43nn-pn8j). 
 
-The codebook can be accessed [here](codebook.xlsx). 
+* The codebook can be accessed [here](codebook.xlsx). 
 
-The format of the data was given to us in [P8105](https://p8105.com/dataset_restaurant_inspections.html).
+* The format of the data was given to us in [P8105](https://p8105.com/dataset_restaurant_inspections.html).
+
+# Code
+
+* The code I used to wrangle the data and render it for each chart on the dashboard is as follows:
+
+data("rest_inspec")
+
+rest_inspec = 
+  rest_inspec%>%
+  janitor::clean_names() %>%
+  mutate(boro = str_to_lower(boro)) %>%
+  filter(inspection_date != "01/01/1990") %>%
+  drop_na()
+  
+## Chart A
+
+score_street = 
+  rest_inspec %>%
+  group_by(street) %>%
+  filter(cuisine_description == "Seafood" & boro == "manhattan") %>%
+  filter(str_detect(inspection_date,"2017")) 
+
+score_street
+
+### Plot A
+score_street %>%
+  mutate(text_label = str_c("Name: ", dba, 
+                            '\nScore: ', score,
+                            '\nGrade: ', grade)) %>%
+  plot_ly(
+    x = ~street,
+    y = ~score,
+    color = ~grade,
+    colors = viridis_pal(option = "C")(3),
+    type = "scatter",
+    mode = "markers",
+    text = ~text_label,
+    alpha = 0.5)
+    
+## Chart B
+critical_pizza = 
+  rest_inspec %>%
+  filter(critical_flag == "Critical" & 
+           cuisine_description == "Pizza") %>%
+  filter(str_detect(inspection_date,"2016")) %>%
+  group_by(boro)
+
+critical_pizza
+
+### Plot B
+critical_pizza %>%
+  mutate(grade = forcats::fct_relevel(grade, c("A", "B", "C", "P", "Z", "Not Yet Graded"))) %>%
+  plot_ly(
+    x = ~boro,
+    y = ~score,
+    color = ~boro,
+    colors = viridis_pal(option = "D")(3),
+    type = "box",
+    alpha = 0.5
+  ) 
+
+## Chart C
+brooklyn_scores = 
+  rest_inspec %>%
+  filter(str_detect(action, "re-opened") & grade == "Z") %>%
+  group_by(grade_date) %>%
+  filter(str_detect(grade_date, "2017-09") & boro == "brooklyn") %>%
+  mutate(avg_score = mean(score))
+
+brooklyn_scores
+
+### Plot C
+brooklyn_scores %>%
+  mutate(text_label = str_c("Type: ", cuisine_description, 
+                            '\nAverage Score: ', avg_score)) %>%
+plot_ly(x = ~cuisine_description,
+        color = ~cuisine_description,
+        colors = viridis_pal(option = "D")(3),
+        type = "histogram",
+        text = ~text_label)

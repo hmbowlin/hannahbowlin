@@ -19,3 +19,5 @@ I have two Newfoundland dogs:
 ### Wilson
 <img src="images/Wilson.jpg" style="width:75%">
 
+This website was created using RStudio in an RMarkDown through Github.
+
