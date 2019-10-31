@@ -14,9 +14,9 @@ Chart A displays the scores of Seafood restaurants by street in Manhattan in 201
 Column {data-width=450}
 -----------------------------------------------------------------------
 
-### Chart B: Distribution of Scores in Queens Pizza Restaurants in 2017
+### Chart B: Distribution of Scores in Critically Flagged Pizza Restaurants in 2016
 
-Chart B shows the distribution of scores among critically flagged pizza restaurants in Queens in 2017. I was curious to see if the data were correctly categorizing grades as well as the distribution of scores among pizza restaurants with a critical flag. I was surprised that restaurants with an A grade can still have a critical flag. It good to see that the scores are correctly bucketing into the appropriate grade. I am amazed that restaurants can have a score of 51 and operate. I do not even want to know what their kitchens look like.
+Chart B shows the distribution of scores among critically flagged pizza restaurants across boros in 2017. I was curious to see the distribution of scores among pizza restaurants with a critical flag. Staten Island has the highest scores among third quartiles, but overall the medians are about the same. Manhattan has some very high outliers, as does queens. 
 
 
 Column {data-width=450}

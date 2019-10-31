@@ -42,14 +42,14 @@ score_street =
 score_street
 
 ##Chart B
-critical_pizza_queens = 
+critical_pizza = 
   rest_inspec %>%
   filter(critical_flag == "Critical" & 
-           boro == "queens" & 
            cuisine_description == "Pizza") %>%
-  filter(str_detect(inspection_date,"2016")) 
+  filter(str_detect(inspection_date,"2016")) %>%
+  group_by(boro)
 
-critical_pizza_queens
+critical_pizza
 
 ##Chart C
 brooklyn_scores = 
@@ -88,15 +88,15 @@ score_street %>%
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B: Distribution of Scores in Queens Pizza Restaurants in 2017
+### Chart B: Distribution of Scores in Pizza Restaurants in 2016
 
 ```{r, echo = FALSE}
-critical_pizza_queens %>%
+critical_pizza %>%
   mutate(grade = forcats::fct_relevel(grade, c("A", "B", "C", "P", "Z", "Not Yet Graded"))) %>%
   plot_ly(
-    x = ~grade,
+    x = ~boro,
     y = ~score,
-    color = ~grade,
+    color = ~boro,
     colors = viridis_pal(option = "D")(3),
     type = "box",
     alpha = 0.5
