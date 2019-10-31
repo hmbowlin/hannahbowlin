@@ -8,7 +8,7 @@ Column {data-width=450}
 
 ### Chart A: Distribution of Scores of Manhattan Seafood Restaurants by Street in 2017
 
-Chart A displays the scores of Seafood restaurants 
+Chart A displays the scores of Seafood restaurants by street in Manhattan in 2017. I wanted to see if 
 
 
 Column {data-width=450}

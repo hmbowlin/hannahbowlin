@@ -56,7 +56,8 @@ brooklyn_scores =
   rest_inspec %>%
   filter(str_detect(action, "re-opened") & boro == "brooklyn") %>%
   group_by(grade_date) %>%
-  filter(str_detect(grade_date, "2017-09") & grade == "Z")
+  filter(str_detect(grade_date, "2017-09") & grade == "Z") %>%
+  mutate(avg_score = mean(score))
 
 brooklyn_scores
 
@@ -102,19 +103,16 @@ critical_pizza_queens %>%
   ) 
 ```
 
-### Chart C: Re-Opened Brooklyn Restaurant Scores in 2017
+### Chart C: Histogram of Re-Opened Brooklyn Restaurants in 2017
 
 ```{r, echo = FALSE}
 brooklyn_scores %>%
-  mutate(text_label = str_c("Name: ", dba, 
-                            '\nGrade Date: ', grade_date,
-                            '\nGrade: ', grade, 
-                            '\nFlag: ', critical_flag)) %>%
-plot_ly(x = ~inspection_date,
-        y = ~score,
+  mutate(text_label = str_c("Type: ", cuisine_description, 
+                            '\nAverage Score: ', avg_score)) %>%
+plot_ly(x = ~cuisine_description,
         color = ~cuisine_description,
         colors = viridis_pal(option = "D")(3),
-        type = "bar",
+        type = "histogram",
         text = ~text_label)
 ```
 
