@@ -16,7 +16,7 @@ In my spare time I love running, doing yoga, and following Minnesota sports (no 
 Enjoy a picture of my cabin on the St. Croix River and learn more about me [here](about.html).
 
 
-<img src="images/cabin.jpeg" style="width:75%">
+<img src="images/cabin.jpeg" style="width:90%">
 
 
 
