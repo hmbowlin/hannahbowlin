@@ -52,13 +52,13 @@ critical_pizza_queens =
 critical_pizza_queens
 
 ##Chart C
-italian_scores = 
+statenisland_scores = 
   rest_inspec %>%
-  filter(str_detect(action, "re-opened") & boro == "brooklyn") %>%
+  filter(str_detect(action, "re-opened") & boro == "staten island") %>%
   group_by(grade_date) %>%
   filter(str_detect(grade_date, "2017") & grade == "Z")
 
-italian_scores
+statenisland_scores
 
 ```
 
@@ -102,10 +102,10 @@ critical_pizza_queens %>%
   ) 
 ```
 
-### Chart C: Re-Opened Italian Restaurant Scores in 2017
+### Chart C: Re-Opened Staten Island Restaurant Scores in 2017
 
 ```{r, echo = FALSE}
-italian_scores %>%
+statenisland_scores %>%
   mutate(text_label = str_c("Name: ", dba, 
                             '\nGrade Date: ', grade_date,
                             '\nGrade: ', grade, 
