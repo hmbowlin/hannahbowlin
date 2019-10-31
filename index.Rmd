@@ -6,7 +6,6 @@ output:
     toc_float: true
     theme: flatly
 ---
-<link rel="shortcut icon" type="image/x-icon" href="images/forest.png">
 
 ## Welcome! 
 

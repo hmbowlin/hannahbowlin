@@ -2,7 +2,6 @@
 title: "explanations"
 output: html_document
 ---
-<link rel="shortcut icon" type="image/x-icon" href="images/forest.png">
 
 Column {data-width=450}
 -----------------------------------------------------------------------

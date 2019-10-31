@@ -5,7 +5,6 @@ output:
     orientation: columns
     vertical_layout: fill
 ---
-<link rel="shortcut icon" type="image/x-icon" href="images/forest.png">
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
