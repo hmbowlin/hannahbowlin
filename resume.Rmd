@@ -2,6 +2,7 @@
 title: "Resume"
 output: html_document
 ---
+<link rel="shortcut icon" type="image/x-icon" href="images/forest.png">
  
 ## Hannah Bowlin
 bowlin.hannah@columbia.edu • 952-693-8236

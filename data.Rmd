@@ -2,6 +2,8 @@
 title: "Data Source"
 output: html_document
 ---
+<link rel="shortcut icon" type="image/x-icon" href="images/forest.png">
+
 # Data 
 
 * The data in my dashboard come from [DOHMH NYC Inspections](https://dev.socrata.com/foundry/data.cityofnewyork.us/43nn-pn8j). 

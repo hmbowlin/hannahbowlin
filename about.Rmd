@@ -2,6 +2,8 @@
 title: "about"
 output: html_document
 ---
+<link rel="shortcut icon" type="image/x-icon" href="images/forest.png">
+
 <img src="images/headshot.jpeg" style="width:75%">
 
 ## Academic
